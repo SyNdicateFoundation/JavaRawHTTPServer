@@ -1,0 +1,170 @@
+.top-bar {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 15px 0;
+    z-index: 1000;
+    text-align: center;
+}
+
+.top-bar nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.top-bar nav ul li {
+    margin: 0 20px;
+}
+
+.top-bar nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: color 0.3s;
+}
+
+.top-bar nav ul li a:hover {
+    color: aqua;
+}
+
+/* Asl safhe */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(180deg, aqua, blue);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    overflow-x: hidden;
+}
+
+
+.container {
+    text-align: center;
+    margin-top: 50px;
+    opacity: 0;
+    animation: fadeIn 2s ease forwards;
+}
+
+
+.logo img {
+    width: 150px;
+    height: auto;
+    border-radius: 50%;
+    animation: slideUp 2s ease-out forwards;
+}
+
+.welcome-text h1 {
+    font-size: 2.5rem;
+    color: white;
+    margin: 10px 0;
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.8), 0 0 20px rgba(255, 255, 255, 0.6);
+}
+
+.animated-text span {
+    font-size: 3rem;
+    font-weight: bold;
+    color: blue;
+    animation: slideUp 2s ease-out 0.5s forwards;
+}
+
+.repo-count {
+    font-size: 1.5rem;
+    color: white;
+    margin-top: 20px;
+}
+
+.repo-count span {
+    font-size: 2rem;
+    color: red;
+    font-weight: bold;
+    animation: lightGlow 1.5s ease-in-out infinite;
+}
+
+.contact-section {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 150px;
+}
+
+.contact-box {
+    width: 300px;
+    height: 150px;
+    background-color: #f1f1f1;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-box h2 {
+    color: #0077cc;
+    font-size: 1.8rem;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.contact-box:hover h2 {
+    transform: scale(1.05);
+    color: blue;
+}
+
+.contact-box a {
+    text-decoration: none;
+}
+
+@keyframes slideUp {
+    0% {
+        transform: translateY(100%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+
+.scroll-indicator-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 5px;
+    background-color: blue;
+    z-index: 999;
+}
+
+@keyframes lightGlow {
+    0% {
+        text-shadow: 0 0 10px rgba(255, 0, 0, 0.6), 0 0 20px rgba(255, 0, 0, 0.4);
+    }
+    50% {
+        text-shadow: 0 0 20px rgba(255, 0, 0, 0.9), 0 0 30px rgba(255, 0, 0, 0.6);
+    }
+    100% {
+        text-shadow: 0 0 10px rgba(255, 0, 0, 0.6), 0 0 20px rgba(255, 0, 0, 0.4);
+    }
+}
